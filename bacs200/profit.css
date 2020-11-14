@@ -2,5 +2,9 @@
   --header-color: #7dbec2;
   --header-background-color: #2b4053;
   --bg-color: #000000;
+  --body-color:rgb(43,64,83)
 }
-  
+body{
+background-color: var(--body-color);
+color:rgb(0000FF);
+}
