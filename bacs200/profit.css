@@ -1,10 +1,15 @@
 :root {
-  --header-color: #7dbec2;
-  --header-background-color: #2b4053;
-  --bg-color: #000000;
-  --body-color:rgb(43,64,83)
+  --white: #FFFFFF;
+  --heifer-blue:rgb(43,64,83)
+}
+header{
+  background-color: var(--white);
 }
 body{
-background-color: var(--body-color);
-color:rgb(0000FF);
+  background-color: var(--heifer-blue);
+  color:var(--white);
+}
+.button 
+{
+  background-color: rgb(57,116,133);
 }
