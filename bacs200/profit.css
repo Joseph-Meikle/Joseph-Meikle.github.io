@@ -4,12 +4,20 @@
 }
 header{
   background-color: var(--white);
+  color:#000000;
 }
 body{
   background-color: var(--heifer-blue);
   color:var(--white);
+  margin-left:20px;
 }
 .button 
 {
   background-color: rgb(57,116,133);
+  color:var(--white);
+}
+.center {
+display:block;
+margin-left: auto;
+margin-right: auto;
 }
