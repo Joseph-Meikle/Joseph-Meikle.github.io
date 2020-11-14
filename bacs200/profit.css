@@ -12,6 +12,7 @@ color:var(--heifer-blue);
 }
 body{
   margin-left:0px;
+  background-color:var(--heifer-blue);
 }
 main{
   background-color: var(--heifer-blue);
