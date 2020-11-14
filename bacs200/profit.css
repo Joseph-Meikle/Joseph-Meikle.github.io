@@ -1,4 +1,4 @@
-.page-theme--clarity-white,
 :root {
-  --headers-border-color: #7dbec2;
-  --headers-background-color: #2b4053;
+  --header-color: #7dbec2;
+  --header-background-color: #2b4053;
+  --bg-color: #000000;
