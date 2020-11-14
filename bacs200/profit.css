@@ -23,7 +23,7 @@ main{
 }
 .center {
 display:block;
-margin-left:0px;
+/*margin-left:0px;*/
 padding-left: auto;
 padding-right: auto;
 background-color: var(--white);
