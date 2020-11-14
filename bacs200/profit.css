@@ -24,8 +24,8 @@ main{
 .center {
 display:block;
 /*margin-left:0px;*/
-padding-left: auto;
-padding-right: auto;
+margin-left: auto;
+margin-right: auto;
 background-color: var(--white);
 color:var(--heifer-blue);
 text-size:3rem;
