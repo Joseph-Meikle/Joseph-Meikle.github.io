@@ -19,12 +19,13 @@ main{
 {
   background-color: rgb(57,116,133);
   color:var(--white);
-  text-size:6rem;
+  text-size:300%;
 }
 .center {
 display:block;
-margin-left: auto;
-margin-right: auto;
+margin-left:0px;
+padding-left: auto;
+padding-right: auto;
 background-color: var(--white);
 color:var(--heifer-blue);
 text-size:3rem;
