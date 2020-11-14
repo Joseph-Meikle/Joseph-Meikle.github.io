@@ -10,7 +10,7 @@ header{
 h1{
 color:var(--heifer-blue);
 }
-body{
+main{
   background-color: var(--heifer-blue);
   color:var(--white);
   margin-left:20px;
@@ -19,6 +19,7 @@ body{
 {
   background-color: rgb(57,116,133);
   color:var(--white);
+  text-size:6rem;
 }
 .center {
 display:block;
