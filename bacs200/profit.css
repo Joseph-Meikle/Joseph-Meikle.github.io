@@ -44,6 +44,6 @@ text-size:3rem;
     height: 282px
 }
 
-.card {
-   background-color:var(--heifer-blue);
+.cardcolor {
+   background-color: rgb(57,116,133);
 }
