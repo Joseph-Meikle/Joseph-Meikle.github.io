@@ -35,7 +35,19 @@ color:var(--heifer-blue);
 text-size:3rem;
 }
 
+.navyblue {
+    background-color: steelblue;
+}
+
+.navybluetext {
+    color: steelblue
+}
+
 .scroll {
-    max-height: 400px;
-    overflow-y: auto;
+    overflow-y: scroll;
+    height: 282px
+}
+
+.height {
+    height: 282px
 }
