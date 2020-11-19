@@ -35,14 +35,6 @@ color:var(--heifer-blue);
 text-size:3rem;
 }
 
-.navyblue {
-    background-color: steelblue;
-}
-
-.navybluetext {
-    color: steelblue
-}
-
 .scroll {
     overflow-y: scroll;
     height: 282px
@@ -50,4 +42,8 @@ text-size:3rem;
 
 .height {
     height: 282px
+}
+
+.card {
+   background-color:var(--heifer-blue);
 }
