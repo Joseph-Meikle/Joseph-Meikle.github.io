@@ -36,6 +36,6 @@ text-size:3rem;
 }
 
 .scroll {
-    max-height: 100px;
+    max-height: 400px;
     overflow-y: auto;
 }
