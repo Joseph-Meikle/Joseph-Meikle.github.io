@@ -34,3 +34,8 @@ background-color: var(--white);
 color:var(--heifer-blue);
 text-size:3rem;
 }
+
+.scroll {
+    max-height: 100px;
+    overflow-y: auto;
+}
