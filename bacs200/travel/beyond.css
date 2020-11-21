@@ -1,6 +1,8 @@
 .textpic {
   text-align: center;
-  color: white;
+  color: FFFFFF;
+  font-size: 30px;
+  
 }
 .centered {
   position: absolute;
