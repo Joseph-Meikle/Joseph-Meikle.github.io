@@ -7,7 +7,7 @@
   --beyonders-brown:rgb(97,37,3);
 }
 body{
-  background-color:var(--beyonders-lred);
+  background-color:var(--beyonders-grey);
   color:var(--white);
 }
 header{
