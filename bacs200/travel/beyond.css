@@ -1,16 +1,34 @@
+:root {
+  --white:rgb(255,255,255);
+  --beyonders-dred:rgb(117,22,20);
+  --beyonders-lred:rgb(233,18,33);
+  --beyonders-gold:rgb(235,184,0);
+  --beyonders-grey:rgb(47,68,97);
+  --beyonders-brown:rgb(97,37,3);
+}
+header{
+  background-color:var(--beyonders-dred);
+  color:var(--beyonders-gold);
+}
 .textpic {
   text-align: center;
-  color: #FFFFFF;
+  color: var(--white);
 }
 .bigT {
   font-size: 90px;
 }
 .medT {
-  font-size: 30px;
+  font-size: 40px;
 }
 .centered {
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-40%, -50%);
+}
+.higher {
+  position:absolute;
+  top:20%;
+  left:50%;
+  transform: translate(-20%, -50%);
 }
