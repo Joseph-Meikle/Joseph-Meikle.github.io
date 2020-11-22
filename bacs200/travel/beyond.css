@@ -28,6 +28,10 @@ header{
 .medT {
   font-size: 40px;
 }
+.fancybutton {
+  background-color:var(--beyonders-gold);
+  color:var(--beyonders-grey);
+}
 .centered {
   position: absolute;
   top: 40%;
