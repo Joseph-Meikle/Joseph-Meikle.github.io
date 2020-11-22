@@ -9,6 +9,7 @@
 header{
   background-color:var(--beyonders-dred);
   color:var(--beyonders-gold);
+  font-size:200px;
 }
 .textpic {
   text-align: center;
