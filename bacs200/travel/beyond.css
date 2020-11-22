@@ -15,6 +15,9 @@ header{
   color:var(--beyonders-gold);
   font-size:200px;
 }
+.superbig{
+  font-size:500px;
+}
 .textpic {
   text-align: center;
   color: var(--white);
