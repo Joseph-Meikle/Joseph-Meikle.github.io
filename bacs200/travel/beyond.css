@@ -1,23 +1,44 @@
-:root {
+  :root {
   --white:rgb(255,255,255);
   --beyonders-dred:rgb(117,22,20);
-  --beyonders-lred:rgb(233,18,33);
-  --beyonders-gold:rgb(235,184,0);
-  --beyonders-grey:rgb(47,68,97);
+  --beyonders-lred:rgb(218,31,38);
+  --beyonders-gold:rgb(255,190,0);
+  --beyonders-grey:rgb(32,35,44);
   --beyonders-brown:rgb(97,37,3);
+  --beyonders-lgold:rgb(255,200,0);
+  --beyonders-dgold:rgb(201,142,0);
 }
 body{
-  background-color:var(--beyonders-grey);
-  color:var(--white);
+  background-color:var(--beyonders-brown);
+  color:var(--beyonders-lgold);
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size:30px;
+}
+h2{
+  font-size:75px;            
 }
 header{
   background-color:var(--beyonders-dred);
   color:var(--beyonders-gold);
-  font-size:200px;
 }
+.subhead{
+  background-color:var(--beyonders-lred);
+    color:var(--beyonders-lgold);
+}
+        .headerB{font-size:120px;}
 .superbig{
-  font-size:250px;
+  font-size:200px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -0%);
 }
+.containerTWO{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+        
 .textpic {
   text-align: center;
   color: var(--white);
@@ -29,8 +50,9 @@ header{
   font-size: 40px;
 }
 .fancybutton {
-  background-color:var(--beyonders-gold);
-  color:var(--beyonders-grey);
+  background-color:var(--beyonders-grey);
+  color:var(--beyonders-gold);
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 .centered {
   position: absolute;
@@ -47,7 +69,31 @@ header{
 
 .lower {
   position:absolute;
-  top:80%;
+  top:70%;
   left:50%;
   transform: translate(-50%, -50%);
 }
+.lefter {
+  position:absolute;
+  top:40%;
+  left:40%;
+  transform: translate(-40%, -50%);
+}
+.fancynav{
+  background-color:var:(--beyonders-grey);
+  font-size:30px;
+}
+.hidemymess{
+  position:relative;
+  text-align: center;
+  transform: translate(0%, -7%);
+
+}
+        
+.override {
+  color: rgb(255,200,0) !important; 
+}
+.override:hover, .override:active {
+  color: rgb(201,142,0) !important;
+}        
+
