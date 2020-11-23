@@ -105,4 +105,9 @@ header{
 .override:hover, .override:active {
   color: rgb(201,142,0) !important;
 }        
+.paymentplacer{
+  position:relative;
+  text-align: center;
+  transform: translate(0%, -50%);
+}
 
