@@ -49,6 +49,9 @@ header{
 .medT {
   font-size: 40px;
 }
+.smallT {
+  font-size: 20px;
+}
 .fancybutton {
   background-color:var(--beyonders-grey);
   color:var(--beyonders-gold);
