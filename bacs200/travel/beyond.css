@@ -52,6 +52,12 @@ header{
 .smallT {
   font-size: 20px;
 }
+.tinyT{
+  font-size: 15px;
+}
+.makeitgold{
+  color: var(--beyonder-lgold);
+}
 .fancybutton {
   background-color:var(--beyonders-grey);
   color:var(--beyonders-gold);
