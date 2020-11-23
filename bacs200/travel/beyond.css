@@ -108,6 +108,8 @@ header{
 .paymentplacer{
   position:relative;
   text-align: center;
-  transform: translate(0%, -50%);
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -0%);
 }
 
