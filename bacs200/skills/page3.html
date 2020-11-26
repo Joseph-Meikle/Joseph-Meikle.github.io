@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<style>.switch {
+  position: relative;
+  display: inline-block;
+  width: 600px;
+  height: 340px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 260px;
+  width: 260px;
+  left: 40px;
+  bottom: 40px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #FF88FF;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(260px);
+  -ms-transform: translateX(260px);
+  transform: translateX(260px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 300px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.centerme{
+  text-align: center; 
+    }
+    
+.alert {
+  padding: 20px;
+  background-color: #FF88FF;
+  color: white;
+}
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+    
+#myProgress {
+  width: 100%;
+  background-color: #ccc;
+}
+#myBar {
+  width: 0%;
+  height: 60px;
+  background-color: #FF88FF;
+}
+</style>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>BACS 200 - Page1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://joseph-meikle.github.io/bacs200/skills/skilled.css">
+</head>
+
+<body class="bg-light">
+    <h1 class="display-1 centerme pb-5 pt-3">Skill 3: Progress Bar</h1>
+
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+
+<br>
+    <button class="ml-4 mt-6" onclick="move()">Start</button>
+<script>
+var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+}
+</script>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> 
+
+</body>
+</html>
