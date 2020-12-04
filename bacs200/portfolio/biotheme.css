@@ -1,0 +1,104 @@
+.split {
+      height: 70%;
+      width: 100%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      overflow-y: hidden;
+      padding-top: 20px;
+    }
+.split2 {
+      height: 70%;
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      overflow-y:show;
+      padding-top: 20px;
+    }
+.top {
+        top: 0;
+        background-color: darkorange;
+    }    
+.bottom{
+        top: 70%;
+        background-color: #050505;
+    }
+    
+.left {
+  left: 0;
+  background-color: #ccc;
+}
+
+.right {
+  right: 0;
+  background-color: #FF88FF;
+}
+
+.upper {
+  position: relative;
+  top: -5%;
+
+}
+.toppic {
+  position:absolute;
+  top:0;
+    text-align: center;
+}
+.toppic2 {
+  position:absolute;
+  top:-20%;
+    text-align: center;
+    
+}
+.white{color: white;}
+.orange{background-color:#b3ff0b;}
+.black{background-color: black;}
+.downer {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.toppic22 {
+  position:absolute;
+  top:-50%;
+    text-align: center;   
+}
+.centerpic{text-align: center;}
+.rigidpic{position:fixed}
+div > a {
+    font-size:50px;
+}
+.copyright{
+    position: fixed;
+    top:90%;
+}
+div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+div > a:hover {
+    background-color: yellow;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: #5e8a1e;
+  text-align: center;
+  font-size: 30px;
+}
+.grid-container > div {  border: 1px solid black;}
+body{
+    background-color: #5e8a1e;
+}
+.gameborder{
+    outline-style:solid; 
+    outline-width:60px;
+    outline-color:#b3ff0b;
+}
+returnbutton{
+    background-color: #050505;
+}
