@@ -1,0 +1,97 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:darkslategrey;
+}
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: violet;
+}
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    font-family: fantasy;
+    color:khaki;
+}
+h1{
+    font-family: fantasy;
+    font-size: 250%;
+    color:chartreuse;
+}
+
+
+img{
+    width:30vw;
+    height: 30vh;
+    transition-property: width;
+    transition-duration: 10s;
+}
+
+img:hover {
+    width:100vw;
+}
+
+#red-ball{
+    background-color: mediumseagreen;
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    position: absolute;
+    left:5vw;
+    top:0;
+    animation: ball-circling 0.3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ball-circling{
+    0% {
+        top: 275px;
+        left: 1400px;
+    }
+    10% {
+        top: 128.053687px;
+        left: 1352.25425px;
+    }
+    20% {
+        top: 37.2358709px;
+        left: 1227.25425px;
+    }
+    30% {
+        top: 37.2358709px;
+        left: 1072.74575px;
+    }
+    40% {
+        top: 128.053687px;
+        left: 947.745751px;
+    }
+    50% {
+        top: 275px;
+        left: 900px;
+    }
+    60% {
+        top: 421.946313px;
+        left: 947.745751px;
+    }
+    70% {
+        top: 512.764129px;
+        left: 1072.74575px;
+    }
+    80% {
+        top: 512.764129px;
+        left: 1227.25425px;
+    }
+    90% {
+        top: 421.946313px;
+        left: 1352.25425px;
+    }
+    100% {
+        top: 275px;
+        left: 1400px;
+    }
+}
