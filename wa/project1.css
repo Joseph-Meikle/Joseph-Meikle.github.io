@@ -1,88 +1,188 @@
-body {
-    background-color: #01813f;
-    background: linear-gradient(30deg, #018100, #00813f);
-    color: #f6ff00;
-    margin: 0;
-    font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+html{
+    margin:0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
 }
 
+body {
+    background-color: #01813f;/*in case the gradient doesn't work*/
+    background: linear-gradient(30deg, #018128, #00813f);
+    margin: 0;
+    font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+@media screen and (min-width: 500px) {/*wide*/
+    #Concert_Descriptions_Compilation{
+        display: grid;
+        grid-template-columns: 49.5% 49.5%;
+        width: 100%;
+    }
+    h1{
+        font-size:4vw;
+    }
+    article{
+        color: white;
+        background-color: black;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 2%;
+        margin-bottom: 3%;
+        border: solid maroon 0.2vh;
+    }
+    article div ul{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 2%;
+        margin-left: 5%;
+    }
+    article div ul li{
+        margin-bottom: 0.2vh;
+        margin-right: 10%;
+        margin-left: -5%;
+        font-size: .9em;
+    }
+    h3{
+        font-size: 1.5em;
+    }
+    article div h3{
+        font-size: 1.3em;
+    }
+    h5{
+        font-size: 1em;
+    }
+    h6{
+        font-size: 0.9em;
+    }
+    h4,h5,h6,p{
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    p{
+        font-size: 0.8em;
+        text-align: start;/*justify did NOT look good*/
+    }
+}
+
+@media screen and (max-width: 500px) {/*skinny*/
+    #Concert_Descriptions_Compilation{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin:0;
+    }
+    #Concert_Descriptions_Compilation article{
+        width: 100%;
+        margin: 0;
+        padding-left: 5em;
+        padding-right: 5em;
+        margin-left: 0;
+        margin-right: 0;
+        border-top: solid maroon 0.4vh;
+    }
+    article div ul{
+        margin-top: 2%;
+        margin-left: 5%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    article div ul li{
+        margin-bottom: 0.6vh;
+        margin-right: 10%;
+        margin-left: -5%;
+        font-size:0.8em;
+    }
+    h1{
+        font-size:12vw;
+    }
+    h4{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    h5{
+        font-size: 1em;
+    }
+    h6{
+        font-size: 0.9em;
+    }
+    p{
+        font-size: 0.7em;
+        text-align: start;/*justify did NOT look good*/
+    }
+    h4,h5,h6,p{
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+}
+article{
+    color: white;
+    background-color: black;
+}
+article div ul li{
+    text-align: left;
+}
+#Concert_Descriptions_Compilation p {
+    margin: 0%;
+}
+article div h3{
+    margin-bottom: 0.8vh;
+    color: #e4e868;
+}
+
+
+
 h1 {
-    font-size:3vw;
     text-align: center;
-    background-color: #01813f;
-    position: sticky;
     top: 0;
-    padding:3vi;
+    color: #f6ff00;
 }
 
 h3{
     color:rgb(250, 79, 5);
     margin-bottom: 0;
-}
-h4{
-    color:aquamarine;
     text-align: center;
-    font-size: 1.7vh;
+}
+h4,h5{
+    color:aquamarine;
+    font-size: 1em;
     margin-bottom: 0;
+    text-align: center;
 }
 h5{
     color:aquamarine;
-    margin-top: 1vh;
-    margin-left: 1vh;
+    margin-top: 0.5em;
     margin-bottom: 0;
+    text-align: center;
 }
 h6{
     color:#e4e868;
     font-style:bold;
-    margin-top:0.6vi;
-    margin-left: 1vh;
-    margin-bottom:0.6vi;
+    margin-top:0.6vh;
+    margin-bottom:0.6vh;
+    text-align: center;
 }
+a{
+    text-decoration: none;/*more alien-y this way*/
+}
+footer{
+    background-color:rgb(60, 0, 0);
+    transition-property: color background-color;
+    transition-duration: 4s;
 
-@media screen and (min-width: 500px) {
-    #Concert_Descriptions_Compilation{
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
-        width: 100%;
-    }
-    #Concert_Descriptions_Compilation article{
-        margin-top: 0.1vh;
-        margin-bottom: 2vh;
-        margin-left: 0.3vw;
-        margin-right: 0.3vw;
-    }
+    color:rgb(41, 225, 225);
+    text-align: center;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    padding-top:1%;
+    padding-bottom:1%;
+    font-size:1.8em;
 }
-
-@media screen and (max-width: 500px) {
-    #Concert_Descriptions_Compilation{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-#Concert_Descriptions_Compilation p {
-    margin: 0%;
-}
-
-article{
-    color: white;
-    background-color: black;
-    padding-left: 1vi;
-    padding-right: 1vi;
-    border: solid maroon 0.2vi;
-}
-
-article div ul{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    margin-top: -2%;
-}
-article div ul li{
-    margin-bottom: 0.2vi;
-    margin-right: 10%;
-    margin-left: -5%;
-    font-size:0.5vi;
-}
-article div h3{
-    margin-bottom: 0.8vi;
+footer:hover{
+    background-color: rgb(30, 0, 0);
+    color: rgb(164, 252, 252);
 }
