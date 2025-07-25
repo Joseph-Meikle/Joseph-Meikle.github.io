@@ -169,7 +169,7 @@ h6{
 a{
     text-decoration: none;/*more alien-y this way*/
 }
-footer{
+footer div{
     background-color:rgb(60, 0, 0);
     transition-property: color background-color;
     transition-duration: 4s;
@@ -182,7 +182,7 @@ footer{
     padding-bottom:1%;
     font-size:1.8em;
 }
-footer:hover{
+footer div:hover{
     background-color: rgb(30, 0, 0);
     color: rgb(164, 252, 252);
 }
