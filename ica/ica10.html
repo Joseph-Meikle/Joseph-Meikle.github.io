@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Interactivity</title>
+        <script>
+            var headerText;
+            var jo;
+            var joWidth;
+            var smile;
+            var smileText;
+            var smileFlag=false;
+
+            async function addSmile(){
+                if (smileFlag){
+                    smileText+="☺";
+                    smile.textContent=smileText;
+                    setTimeout(() => addSmile(), 50);
+                }
+            } 
+
+            window.addEventListener("load", (event) => {
+                headerText=document.getElementById("headerId");
+                headerText.addEventListener("click",() => {
+                    console.log("Header clicked");
+                });
+
+                jo=document.getElementById("joId");
+                joWidth=parseInt(jo.getAttribute("width"));
+                jo.addEventListener("click",() => {
+                    joWidth+=20;
+                    jo.setAttribute("width",joWidth);
+                });
+                
+                smile=document.getElementById("smileId");
+                smileText=smile.textContent;
+                smile.addEventListener("mouseout",() => {
+                    smileFlag=false;
+                });
+                smile.addEventListener("mouseover",() => {
+                    smileFlag=true;
+                    smileText+="☺";
+                    smile.textContent=smileText;
+                    setTimeout(() => addSmile(), 50);
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+
+        <h1 id="headerId">Some Header</h1>
+        <p id="smileId">☺</p>
+        <img id="joId" src="../img/joJazzy.jpg" width="200" alt="Cannot find this picture">
+    </body>
+</html>
