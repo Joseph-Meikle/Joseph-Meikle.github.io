@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .msgBox {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            background: #eee;
+        }
+
+        .msgBox p {
+            line-height: 1.5;
+            padding: 10px 20px;
+            color: #333;
+        }
+
+        .msgBox button {
+            background: none;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 1.1rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <button>Display message box</button>
+    
+    <script>
+        //alert("This is one of those pop-up message things.");
+        
+        const btn = document.querySelector("button").addEventListener("click",displayMessage);
+        //(note: use anonymous functions to add arguments)
+
+
+
+        function displayMessage(){
+            const body = document.body;
+            
+            let msgText = prompt("Enter your message text.");
+            let msgType = prompt("What kind of message (warning or chat)?");
+
+            const panel = document.createElement("div");
+            panel.setAttribute("class","msgBox");
+            body.appendChild(panel);
+
+            const msg = document.createElement("p");
+            msg.textContent = msgText;
+            panel.appendChild(msg);
+
+            const closeBtn = document.createElement("button");
+            closeBtn.textContent = "x";
+            panel.appendChild(closeBtn);
+
+            closeBtn.addEventListener("click", () => body.removeChild(panel));//or panel.parentNode.
+        
+            if (msgType === "warning"){
+                msg.style.background = "no-repeat right url(https://static.vecteezy.com/system/resources/previews/009/663/941/non_2x/warning-icon-transparent-free-png.png)";
+                msg.style.backgroundSize = "50px";
+                panel.style.backgroundColor = "red";
+            }
+            else if (msgType === "chat"){
+                msg.style.background = "no-repeat right url(https://www.svgrepo.com/show/20820/live-chat.svg)";
+                msg.style.backgroundSize = "50px";
+                panel.style.backgroundColor = "aqua";
+            }
+            else{
+                msg.style.paddingLeft = "20px";
+            }
+        }
+
+        //displayMessage();
+    </script>
+</body>
+</html>
