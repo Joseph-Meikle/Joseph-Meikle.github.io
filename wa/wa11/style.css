@@ -1,0 +1,47 @@
+h1 {
+  font-family: fantasy;
+  color: pink;
+  text-align: center;
+  font-size:5em;
+}
+
+body {
+  width: 900px;
+  margin: 0 auto;
+  background-color: #c65fa6;
+}
+
+.full-img {
+  position: relative;
+  display: block;
+  width: 900px;
+  height: 600px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 900px;
+  height: 600px;
+  background-color: rgba(0,0,0,0);
+}
+
+button {
+  border: 0;
+  background: rgba(198, 12, 12, 0.6);
+  text-shadow: 3px 3px 3px rgb(17, 168, 228);
+  border: 5px solid #0af1bf;
+  position: absolute;
+  cursor: pointer;
+  top: 5px;
+  left: 5px;
+  color:beige;
+}
+
+.thumb-bar img {
+  display: block;
+  width: 20%;
+  float: left;
+  cursor: pointer;
+}
