@@ -1,4 +1,4 @@
-const endpoint = "https://placebear.com/900/600";
+const endpoint = "https://random-d.uk/api/v2/quack";
 const picPlace = document.querySelector("body article img");
 const dogButton = document.querySelector("button");
 dogButton.addEventListener("click",getFact);
