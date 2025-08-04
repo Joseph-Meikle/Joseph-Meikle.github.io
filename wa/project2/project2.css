@@ -1,0 +1,157 @@
+body{
+    font-family: fantasy;
+    background-color: blanchedalmond;
+}
+h1{
+    font-size:5vw;
+    margin-bottom:1.5vw;
+    justify-self: center;
+    color:rgb(146, 78, 5);/*for now*/
+}
+article{
+    margin-left: 12vw;
+    margin-right: 12vw;
+    margin-top: 0;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 2.5vw;
+    width: 66vw;
+    background-color: rgb(242, 134, 97);
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    align-self: center;
+    flex-direction: row;
+    border-radius: 5vw;
+}
+span{
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+}
+#questionText{
+    font-size: 3vw;
+    font-weight: bolder;
+    margin-top:1.8vw;
+    padding-left:2.5vw;
+    margin-bottom:1vw;
+    font-family:'Courier New', Courier, monospace;
+}
+.guessRow{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: row;
+}
+
+.guessRow span{
+    font-family:'Courier New', Courier, monospace;
+    height:1vw;
+    width:4vw;
+    margin-top:0;
+    margin-bottom:1%;
+    margin-left:1%;
+    margin-right:1%;
+    padding-top:0.25vw;
+    padding-bottom:3.3vw;
+    padding-left:.6vw;
+    padding-right:.6vw;
+    font-size:3.8vw;
+    font-weight: bold;
+    text-align: center;
+    border-style: inset;
+    border-width: .1vw;
+    user-select:none;
+}
+.whiteBox{
+    background-color: azure;
+    border-color: azure;
+}
+.grayBox{
+    background-color:gray;/*tomato;*/
+    border-color: gray;
+}
+.yellowBox{
+    background-color:yellow;/*khaki;*/
+    border-color: yellow;
+}
+.greenBox{
+    background-color: lightgreen;/*greenyellow;*/
+    border-color: lightgreen;
+}
+.invalid{
+    font-weight: bolder;
+    background-color: rgb(255, 68, 0);
+    border-color: rgb(255,168,0);
+}
+input{/*button, active or not*/
+    margin-top: 6.7vw;
+    margin-left: 1vw;
+    font-size: 2.5vw;
+    height: 4vw;
+    padding-left: 1.1vw;
+    padding-right: 1.1vw;
+    padding-top: 0.4vw;
+    padding-bottom: 0.4vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 3vw;
+}
+#resultsButton{/*submit*/
+    background-color: #f7c141;
+    color: white;
+    border: none;
+}
+#yayButton{/*success!*/
+    background-color: aqua;
+    color: rgb(0, 55, 55);
+    border: none;
+    padding-left:0;
+    padding-right:0;
+}
+
+@media screen and (max-width: 1000px) {
+    h1{
+        font-size:6vw;/*text is closer to full width of screen*/
+    }
+    article{
+        margin-left: 6vw;
+        margin-right: 6vw;
+        width: 78vw;
+    }
+    .guessRow span{
+        font-size:5vw;
+        width: 5vw;
+        height: 2vw;
+    }
+    input{
+        margin-top: 7vw;
+        margin-left: 1.4vw;
+        font-size: 3vw;
+        padding-left: 1.32vw;
+        padding-right: 1.32vw;
+        padding-top: 0.6vw;
+        padding-bottom: 0.6vw;
+        height: 4.4vw;
+    }
+}
+@media screen and (max-width: 600px) {
+    h1{
+        font-size:8vw;/*text is closer to full width of screen*/
+    }
+    article{
+        margin-left: 6vw;
+        margin-right: 6vw;
+        margin-top: 3vw;
+        padding-bottom: 4vw;
+        width: 78vw;
+    }
+    #questionText{
+        padding-left:2vw;
+        font-size:3.8vw;
+    }
+    input{
+        margin-top: 7.8vw;
+    }
+}
