@@ -48,9 +48,9 @@ span{
     flex-direction: row;
     transition-property: opacity;
     transition-duration: 1s;
-    /*transition: all 10s;*/
     position: relative;
     top: 0;
+    margin-bottom: 0.7vw;
 }
 
 .guessRow span{
@@ -59,13 +59,13 @@ span{
     width:4vw;
     margin-top:0;
     margin-bottom:1%;
-    margin-left:1%;
-    margin-right:1%;
-    padding-top:0.25vw;
-    padding-bottom:3.3vw;
+    margin-left:0.75%;
+    margin-right:0.75%;
+    padding-top:0.15vw;
+    padding-bottom:3.4vw;
     padding-left:.6vw;
     padding-right:.6vw;
-    font-size:3.8vw;
+    font-size:4vw;
     font-weight: bold;
     text-align: center;
     border-style: inset;
@@ -111,8 +111,7 @@ input{/*button, active or not*/
     text-decoration: none;
     display: inline-block;
     border-radius: 3vw;
-    transition-property: all;
-    transition-duration: 0.5s;
+    transition: color 0.5s, background-color 0.5s;
 }
 #resultsButton{/*submit*/
     background-color: #f7c141;
@@ -130,7 +129,7 @@ input{/*button, active or not*/
 
 @keyframes drop-row{
     0% {
-        top: -5.2vw;
+        top: -5.9vw;
     }
     100% {
         top: 0;
@@ -178,7 +177,7 @@ input{/*button, active or not*/
 
     @keyframes drop-row{
         0% {
-            top: -6.3vw;
+            top: -7vw;
         }
         100% {
             top: 0;
@@ -206,7 +205,7 @@ input{/*button, active or not*/
     
     @keyframes drop-row{
         0% {
-            top: -6.3vw;
+            top: -7vw;
         }
         100% {
             top: 0;
