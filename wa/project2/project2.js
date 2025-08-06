@@ -1,7 +1,7 @@
 var digitBoxes=[...document.querySelectorAll(".guessRow span")];//all 10 digit boxes
 const submitButton=document.getElementById("resultsButton");
 const allGuesses=document.getElementById("guesses");
-var guessRow=document.querySelector(".guessRow");
+const topRow=document.querySelector(".guessRow");
 
 //guess generation logic
 var green=[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1];//not -1 if place is known
@@ -17,25 +17,45 @@ function debugPrint(){//wouldn't you know it, it's for debugging
 }
 
 function newGuessRow(){
-    const copyRow = guessRow.cloneNode(true);//deep copy
+    const copyRow = topRow.cloneNode(true);//deep copy
+    topRow.opacity=0;
     for (let i=0;i<10;i++){
         const child=copyRow.children[i];
         child.style.borderStyle="solid";
     }
     allGuesses.insertBefore(copyRow,allGuesses.children[2]);
-    for (let i=2;i<allGuesses.childElementCount;i++){
-        tempGuessRow=allGuesses.children[i].style.opacity=0.6**(i-1);
+    for (let i=2;i<allGuesses.children.length;i++){
+        const tempGuessRow=allGuesses.children[i];
+        tempGuessRow.style.opacity=0.6**(i-1);
+        tempGuessRow.style.animation="";
+        void tempGuessRow.offsetHeight;//force reflow
+        tempGuessRow.style.animation="drop-row 1s cubic-bezier(0.375, 0.82, 0.165, 1) 1";
     }
 }
 function endGame(valid,newRow=true){
     if (valid===true){
         console.log("Phone number submitted!!");//
-        submitButton.id="yayButton";
-        submitButton.value="SUCCESS";
+        if (newRow) newGuessRow();
+        topRow.opacity=0;
+        submitButton.removeEventListener("click",readResults);//turn off submit button FOREVER
+        submitButton.style.backgroundColor="gray";
+        submitButton.style.color="lightgray";
+        //submitButton.id="yayButton";//
+        //submitButton.value="SUCCESS";//
+        guess = ["S","U","B","M","I","T","T","E","D","!"];
+        for (let i=0;i<10;i++){
+            const dB=digitBoxes[i];
+            dB.textContent=String(guess[i]);
+            dB.className="success";
+        }
+        topRow.style.animation="";
+        void topRow.offsetHeight;//force reflow
+        topRow.style.animation="fade-in 1.1s cubic-bezier(0.375, 0.82, 0.765, 1) 1";
     }
     else{
         console.log("LIAR!");//
         if (newRow) newGuessRow();
+        topRow.opacity=0;
         submitButton.removeEventListener("click",readResults);//turn off submit button FOREVER
         submitButton.style.backgroundColor="gray";
         submitButton.style.color="lightgray";
@@ -45,6 +65,9 @@ function endGame(valid,newRow=true){
             dB.textContent=String(guess[i]);
             dB.className="invalid";
         }
+        topRow.style.animation="";
+        void topRow.offsetHeight;//force reflow
+        topRow.style.animation="fade-in 1.1s cubic-bezier(0.375, 0.82, 0.765, 1) 1";
     }
     //hide or remove submit button (aka end the game)
 }
@@ -92,6 +115,9 @@ function generateGuess(){
         dB.textContent=String(guess[i]);
         dB.className="whiteBox";
     }
+    topRow.style.animation="";
+    void topRow.offsetHeight;//force reflow
+    topRow.style.animation="fade-in 1.1s cubic-bezier(0.375, 0.82, 0.765, 1) 1";
     submitButton.addEventListener("click",readResults);
 }
 function readResults(){//aka update constraints
@@ -140,7 +166,7 @@ function readResults(){//aka update constraints
         }
         else if (boxClass==="grayBox"){
             if (digCount[dig]<minCount[dig] || digCount[dig]>maxCount[dig]){//LIAR
-                console.log("Contracts min and/or max for "+dig+" determined earlier");
+                console.log("Contradicts min and/or max for "+dig+" determined earlier");
                 endGame(false);
                 return;
             }

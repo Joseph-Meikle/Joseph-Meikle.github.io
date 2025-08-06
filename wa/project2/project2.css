@@ -25,6 +25,8 @@ article{
     align-self: center;
     flex-direction: row;
     border-radius: 5vw;
+    transition-property: height;/*will be added later*/
+    transition-duration: 0.5s;
 }
 span{
     display: flex;
@@ -44,6 +46,11 @@ span{
     justify-content: left;
     align-items: left;
     flex-direction: row;
+    transition-property: opacity;
+    transition-duration: 1s;
+    /*transition: all 10s;*/
+    position: relative;
+    top: 0;
 }
 
 .guessRow span{
@@ -86,6 +93,11 @@ span{
     background-color: rgb(255, 68, 0);
     border-color: rgb(255,168,0);
 }
+.success{
+    font-weight: bolder;
+    background-color: rgb(124, 183, 229);
+    border-color: rgb(124, 183, 229);
+}
 input{/*button, active or not*/
     margin-top: 6.7vw;
     margin-left: 1vw;
@@ -99,6 +111,8 @@ input{/*button, active or not*/
     text-decoration: none;
     display: inline-block;
     border-radius: 3vw;
+    transition-property: all;
+    transition-duration: 0.5s;
 }
 #resultsButton{/*submit*/
     background-color: #f7c141;
@@ -111,6 +125,30 @@ input{/*button, active or not*/
     border: none;
     padding-left:0;
     padding-right:0;
+}
+
+
+@keyframes drop-row{
+    0% {
+        top: -5.2vw;
+    }
+    100% {
+        top: 0;
+    }
+}
+@keyframes fade-in{
+    0%{
+        opacity: 0%;
+    }
+    40%{
+        opacity: 0%;
+    }
+    90%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 100%;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -137,6 +175,15 @@ input{/*button, active or not*/
         padding-bottom: 0.6vw;
         height: 4.4vw;
     }
+
+    @keyframes drop-row{
+        0% {
+            top: -6.3vw;
+        }
+        100% {
+            top: 0;
+        }
+    }
 }
 @media screen and (max-width: 600px) {
     h1{
@@ -155,5 +202,14 @@ input{/*button, active or not*/
     }
     input{
         margin-top: 7.8vw;
+    }
+    
+    @keyframes drop-row{
+        0% {
+            top: -6.3vw;
+        }
+        100% {
+            top: 0;
+        }
     }
 }
