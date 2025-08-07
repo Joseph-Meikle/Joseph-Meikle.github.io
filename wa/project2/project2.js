@@ -16,6 +16,11 @@ function debugPrint(){//wouldn't you know it, it's for debugging
     console.log(maxCount)
 }
 
+
+function restartGame(){
+    location.reload();
+}
+
 function newGuessRow(){
     const copyRow = topRow.cloneNode(true);//deep copy
     topRow.opacity=0;
@@ -38,9 +43,10 @@ function endGame(valid,newRow=true){
         if (newRow) newGuessRow();
         topRow.opacity=0;
         submitButton.removeEventListener("click",readResults);//turn off submit button FOREVER
-        submitButton.style.backgroundColor="gray";
-        submitButton.style.color="lightgray";
-        //submitButton.id="yayButton";//
+        //submitButton.style.backgroundColor="gray";
+        //submitButton.style.color="lightgray";
+        submitButton.id="againButton";//
+        //submitButton.style.backgroundColor="rgb(43 72 92)";
         //submitButton.value="SUCCESS";//
         guess = ["S","U","B","M","I","T","T","E","D","!"];
         for (let i=0;i<10;i++){
@@ -57,8 +63,10 @@ function endGame(valid,newRow=true){
         if (newRow) newGuessRow();
         topRow.opacity=0;
         submitButton.removeEventListener("click",readResults);//turn off submit button FOREVER
-        submitButton.style.backgroundColor="gray";
-        submitButton.style.color="lightgray";
+        //submitButton.style.backgroundColor="gray";
+        //submitButton.style.color="lightgray";
+        submitButton.style.backgroundColor="rgb(113 41 14)";
+        submitButton.id="againButton";//
         guess = [" ","Y","O","U"," ","L","I","A","R"," "];
         for (let i=0;i<10;i++){
             const dB=digitBoxes[i];
@@ -69,7 +77,9 @@ function endGame(valid,newRow=true){
         void topRow.offsetHeight;//force reflow
         topRow.style.animation="fade-in 1.1s cubic-bezier(0.375, 0.82, 0.765, 1) 1";
     }
-    //hide or remove submit button (aka end the game)
+    
+    submitButton.value="AGAIN?";
+    submitButton.addEventListener("click",restartGame);
 }
 
 function generateGuessHelper(i, guess, yellowCount, guessCount, indOrder){
@@ -217,4 +227,5 @@ for (let i=0;i<digitBoxes.length;i++){
         }
     });
 }
+
 generateGuess();
