@@ -1,5 +1,5 @@
+
 body{
-    font-family: fantasy;
     background-color: blanchedalmond;
 }
 h1{
@@ -21,18 +21,16 @@ article{
     background-color: rgb(242, 134, 97);
     display: flex;
     justify-content: left;
-    align-items: left;
     align-self: center;
     flex-direction: row;
     border-radius: 5vw;
     transition-property: height;/*will be added later*/
-    transition-duration: 0.5s;
+    transition-duration: 1s;
 }
-span{
-    display: flex;
-    align-items: left;
-    flex-direction: column;
+#guesses{
+    display: inline;/*just in case*/
 }
+
 #questionText{
     font-size: 3vw;
     font-weight: bolder;
@@ -44,7 +42,6 @@ span{
 .guessRow{
     display: flex;
     justify-content: left;
-    align-items: left;
     flex-direction: row;
     transition-property: opacity;
     transition-duration: 1s;
@@ -109,13 +106,13 @@ input{/*button, active or not*/
     padding-bottom: 0.4vw;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     border-radius: 3vw;
     border-style: none;
     color: azure;
     background-color: #eeae16;
     box-shadow: 0 0.1vw 0.2vw rgba(0, 0, 0, 0.15);
     transition: color 0.5s, background-color 0.5s;
+    float:inline-end;
 }
 #resultsButton{/*submit*/
     border-style:none;
