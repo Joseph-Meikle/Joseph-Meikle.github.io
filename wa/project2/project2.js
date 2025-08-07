@@ -214,6 +214,7 @@ function readResults(){//aka update constraints
 //initialization/startup
 for (let i=0;i<digitBoxes.length;i++){
     const dB=digitBoxes[i];
+    dB.opacity=0;
     dB.addEventListener("click",()=>{
         const boxMode = dB.className;
         if (boxMode==="whiteBox" || boxMode==="grayBox"){
